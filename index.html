@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
+
 <body>
-<header class="header">
+    <header class="header">
+        <img class="logo" src="./img/logo 23.png" alt="logo">
+        <div>
+            <ul class="nav">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./genres.html">GENRES</a></li>
+                <li><a href="./playlist.html">PLAYLIST</a></li>
+            </ul>
+        </div>
+            
     
-<nav class="navegacion">
-    <a href="./index.html">HOME</a>
-    <a href="./genres.html">GENRES</a>
-    <a href="./playlist.html">PLAYLIST</a>
-</nav>
-</header>
-  
-<script src="./js/index.js"></script> 
+        <div class="buscador">
+            <form class="formulario" action="./search-results.html" method="GET">
+                <input class='search' type="text" name="q" id="search" value=""
+                    placeholder="Busca por título, artista ...">
+                <button class="lupa" id="buscador" type="submit">
+                    Buscar
+                </button>
+                <p class="alert"></p>
+            </form>
+        </div>
+ 
+    </header>
+    <h2></h2>
+    <footer>
+            <section class="iconos">
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://m.facebook.com/login/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.whatsapp.com/?lang=es"><i class="fa-brands fa-whatsapp"></i></a>
+            </section>
+            <p>Elaborado por: Lara Manfredini, Lucas Caffarone y Juan De La Cruz Magliano (estudiantes de la materia
+                Programación 1 -
+                Licenciatura de Negocios Digitales) </p>
+        </footer>
+        <script src="./js/index.js"></script>
 </body>
+
 </html>
