@@ -8,7 +8,41 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header class="header">
+        <img class="logo" src="./img/logo 23.png" alt="logo">
+        <div>
+            <ul class="nav">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./genres.html">GENRES</a></li>
+                <li><a href="./playlist.html">PLAYLIST</a></li>
+            </ul>
+        </div>
+            
+    
+        <div class="buscador">
+            <form class="formulario" action="./search-results.html" method="GET">
+                <input class='search' type="text" name="q" id="search" value=""
+                    placeholder="Busca por título, artista ...">
+                <button class="lupa" id="buscador" type="submit">
+                    Buscar
+                </button>
+                <p class="alert"></p>
+            </form>
+        </div>
+    </header>
 
+
+    <footer>
+        <section class="iconos">
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://m.facebook.com/login/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.whatsapp.com/?lang=es"><i class="fa-brands fa-whatsapp"></i></a>
+        </section>
+        <p>Elaborado por: Lara Manfredini, Lucas Caffarone y Juan De La Cruz Magliano (estudiantes de la materia
+            Programación 1 -
+            Licenciatura de Negocios Digitales) </p>
+    </footer>
 <script src="./js/detail-album.js"></script>
 </body>
 </html>

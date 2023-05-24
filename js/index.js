@@ -1,5 +1,4 @@
 //FORMULARIO
-
 let campo = document.querySelector('.search')
 let aviso = document.querySelector('.alert')
 let formulario = document.querySelector('.formulario');
