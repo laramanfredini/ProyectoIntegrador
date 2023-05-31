@@ -11,15 +11,19 @@
 </head>
 
 <body>
-    <header class="header">
-        <img class="logo" src="./img/logo 23.png" alt="logo">
-        <div>
-                <a href="./index.html">HOME</a>
-                <a href="./genres.html">GENRES</a>
-                <a href="./playlist.html">PLAYLIST</a>
+    <header>
+        <div class="logo">
+            <img class="logo" src="./img/logo.png" alt="logo">
         </div>
-            
-    
+        <nav>
+            <ul class="menu">
+                <li> <a href="./index.html">HOME</a></li>
+                <li> <a href="./genres.html">GENRES</a></li>
+                <li> <a href="./playlist.html">PLAYLIST</a></li>
+            </ul>
+        </nav>
+
+
         <div class="buscador">
             <form class="formulario" action="./search-results.html" method="GET">
                 <input class='search' type="text" name="q" id="search" value=""
@@ -30,39 +34,41 @@
                 <p class="alert"></p>
             </form>
         </div>
- 
+
     </header>
 
     <main class="tcontainer">
 
-        <h2 class="priurl"> <em>Canciones</em></h2>
+        <h2 class="priurl"> <em>Canciones:</em></h2>
+        <!--tipodepalabra-->
         <section class="canciones">
+            <!--peliculaspopulares-->
 
         </section>
 
-        <h2 class="segurl"> <em>Albumes</em></h2>
+        <h2 class="segurl"> <em>Albumes:</em></h2>
         <section class="albumes">
 
         </section>
 
-        <h2 class="terurl"><em>Artistas</em></h2>
+        <h2 class="terurl"><em>Artistas:</em></h2>
         <section class="artistas">
 
         </section>
     </main>
 
     <footer>
-            <section class="iconos">
-                <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://m.facebook.com/login/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.whatsapp.com/?lang=es"><i class="fa-brands fa-whatsapp"></i></a>
-            </section>
-            <p>Elaborado por: Lara Manfredini, Lucas Caffarone y Juan De La Cruz Magliano (estudiantes de la materia
-                Programación 1 -
-                Licenciatura de Negocios Digitales) </p>
-        </footer>
-        <script src="./js/index.js"></script>
+        <section class="iconos">
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://m.facebook.com/login/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.whatsapp.com/?lang=es"><i class="fa-brands fa-whatsapp"></i></a>
+        </section>
+        <p>Elaborado por: Lara Manfredini, Lucas Caffarone y Juan De La Cruz Magliano (estudiantes de la materia
+            Programación 1 -
+            Licenciatura de Negocios Digitales) </p>
+    </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
