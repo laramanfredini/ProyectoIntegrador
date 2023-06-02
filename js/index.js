@@ -23,8 +23,8 @@ else {
 
 //cada seccion tiene un url y un fetch propio
 
-//priurl
-let priurl = "https://api.deezer.com/track/3135556"
+//priurl canciones
+let priurl = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
 
 fetch(priurl)
 
@@ -33,23 +33,27 @@ return respuesta.json();
 })
     .then(function(data){
         console.log(data)
-        let canciones = data.results /* el results es generico y contiene el array*/
+        let info = data.results /* el results es generico y contiene el array*/
         let prisection = document.querySelector(".canciones")
         let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let index = 0; index < info.length; index++){ /* i++ se va iterando
-        contenido+= hacer todo*/
+    for (let i = 0; i < 6; i++){ // i++ se va iterando
+        contenido+= `<article class="cajas-track">
+        <img src=${info[i].picture} alt='' />
+        <p>title: ${info[i].title} </p>
+        <p>Name: ${info[i].name} </p>
+        </article>`
     
     }
-        prisection.innerHTML += contenido
+        prisection.innerHTML += contenido;
 
     })
     .catch(function(error){
         console.log('El error es' + error);
     })
 
-//segurl
-let segurl = "https://api.deezer.com/album/302127"
+//segurl albums
+let segurl = ("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums")
 fetch(segurl)
 .then(function(respuesta){
     return respuesta.json();
@@ -61,7 +65,7 @@ fetch(segurl)
     let segsection = document.querySelector(".albumes")
     let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let index = 0; index < info.length; index++) { /*i++ se va iterando
+    for (let i = 0; index < 6; i++) { /*i++ se va iterando
     contenido+= seguir aca*/
 
     }
@@ -72,8 +76,8 @@ fetch(segurl)
     console.log('El error es' + error);
 })
 
-//terurl
-let terurl = "https://api.deezer.com/artist/27"
+//terurl artist
+let terurl = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 fetch(terurl)
 .then(function(respuesta){
     return respuesta.json();
@@ -82,10 +86,10 @@ fetch(terurl)
 .then(function(data){
     console.log(data);
     let info = data.results /* el results es generico y contiene el array*/
-    let segsection = document.querySelector(".artistas")
+    let tersection = document.querySelector(".artistas")
     let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let index = 0; index < info.length; index++) { /*i++ se va iterando
+    for (let i = 0; i < 6; i++) { /*i++ se va iterando
     contenido+= seguir aca*/
 
     }
