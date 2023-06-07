@@ -40,7 +40,8 @@ return respuesta.json();
     for (let i = 0; i < info.length; i++){ // i++ se va iterando
         contenido+= `<article class="cajas-track">
         <img src=${info[i].artist.picture} alt='' />
-        <p>title: ${info[i].title} </p>
+        <p>Title: ${info[i].title} </p>
+        <p>Artist: ${info[i].artist.name}
         </article>`
     
     }
@@ -60,13 +61,15 @@ fetch(segurl)
 
 .then(function(data){
     console.log(data);
-    let info = data.results /* el results es generico y contiene el array*/
-    let segsection = document.querySelector(".albumes")
-    let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
+    let info = data.data /* el results es generico y contiene el array*/
+    let segsection = document.querySelector('.albumes');
+    let contenido = []; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let i = 0; index < 6; i++) { /*i++ se va iterando
-    contenido+= seguir aca*/
-
+    for (let i = 0; i < info.length; i++) { //i++ se va iterando
+    contenido+= `<article class="cajas-track">
+    <img src=${info[i].cover} alt='' />
+    <p>Title: ${info[i].title} </p>
+    </article>`
     }
     segsection.innerHTML += contenido
 })
@@ -84,12 +87,15 @@ fetch(terurl)
 
 .then(function(data){
     console.log(data);
-    let info = data.results /* el results es generico y contiene el array*/
+    let info = data.data; /* el results es generico y contiene el array*/
     let tersection = document.querySelector(".artistas")
-    let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
+    let contenido = []; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let i = 0; i < 6; i++) { /*i++ se va iterando
-    contenido+= seguir aca*/
+    for (let i = 0; i < info.length; i++) { //i++ se va iterando
+    contenido+= `<article class="cajas-track">
+    <img src=${info[i].picture} alt='' />
+    <p>Title: ${info[i].name} </p>
+    </article>`
 
     }
     tersection.innerHTML += contenido
