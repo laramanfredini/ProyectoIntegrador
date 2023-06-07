@@ -39,9 +39,11 @@ return respuesta.json();
 
     for (let i = 0; i < info.length; i++){ // i++ se va iterando
         contenido+= `<article class="cajas-track">
+        <a href="./detail-song.html?id=${info[i].id}">
         <img src=${info[i].artist.picture} alt='' />
-        <p>Title: ${info[i].title} </p>
-        <p>Artist: ${info[i].artist.name}
+        <h3>Title: ${info[i].title} </h3>
+        <h4>Artist: ${info[i].artist.name}</h4>
+        </a>
         </article>`
     
     }
@@ -68,7 +70,7 @@ fetch(segurl)
     for (let i = 0; i < info.length; i++) { //i++ se va iterando
     contenido+= `<article class="cajas-track">
     <img src=${info[i].cover} alt='' />
-    <p>Title: ${info[i].title} </p>
+    <h3>Title: ${info[i].title} </h3>
     </article>`
     }
     segsection.innerHTML += contenido
@@ -94,7 +96,7 @@ fetch(terurl)
     for (let i = 0; i < info.length; i++) { //i++ se va iterando
     contenido+= `<article class="cajas-track">
     <img src=${info[i].picture} alt='' />
-    <p>Title: ${info[i].name} </p>
+    <h3>Title: ${info[i].name} </h3>
     </article>`
 
     }

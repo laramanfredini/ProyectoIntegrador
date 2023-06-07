@@ -21,3 +21,34 @@ else {
     this.submit()
 }
 })
+
+
+//GENEROS
+let urlGenres ='https://api.allorigins.win/raw?url=https://api.deezer.com/genre';
+
+fetch (urlGenres)
+  .then(function(res) {
+  return res.json();
+  })
+
+  .then(function(data){
+    console.log (data);
+     let info  = data.data
+     let section = document.querySelector ('.section');
+     let contenido = []
+     for (let i = 0; i<info.length; i++){
+
+      contenido += `<ul>
+      <a href="./detail-genres.html?id=${info.data[i].id}">
+      <h3>Title: ${info[i].name} </h3></a>
+      </ul>`
+
+          console.log(info.data[i].picture);
+  
+      };
+      section.innerHTML +=contenido;
+     })
+     .catch(function(error){
+        console.log('El error es' + error);
+    })
+
