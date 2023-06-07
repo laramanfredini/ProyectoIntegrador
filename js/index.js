@@ -68,9 +68,11 @@ fetch(segurl)
     let contenido = []; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
     for (let i = 0; i < info.length; i++) { //i++ se va iterando
-    contenido+= `<article class="cajas-track">
+    contenido+= `<article class="cajas-album">
+    <a href="./detail-album.html?id=${info[i].id}">
     <img src=${info[i].cover} alt='' />
     <h3>Title: ${info[i].title} </h3>
+    </a>
     </article>`
     }
     segsection.innerHTML += contenido
@@ -94,9 +96,11 @@ fetch(terurl)
     let contenido = []; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
     for (let i = 0; i < info.length; i++) { //i++ se va iterando
-    contenido+= `<article class="cajas-track">
+    contenido+= `<article class="cajas-artist">
+    <a href="./detail-artist.html?id=${info[i].id}">
     <img src=${info[i].picture} alt='' />
     <h3>Title: ${info[i].name} </h3>
+    </a>
     </article>`
 
     }
@@ -106,5 +110,6 @@ fetch(terurl)
 .catch(function(error){
     console.log('El error es' + error);
 })
+
 
 
