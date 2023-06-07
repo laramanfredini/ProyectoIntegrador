@@ -24,7 +24,7 @@ else {
 //cada seccion tiene un url y un fetch propio
 
 //priurl canciones
-let priurl = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
+let priurl = ("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks")
 
 fetch(priurl)
 
@@ -33,15 +33,14 @@ return respuesta.json();
 })
     .then(function(data){
         console.log(data)
-        let info = data.results /* el results es generico y contiene el array*/
-        let prisection = document.querySelector(".canciones")
-        let contenido = ""; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
+        let info = data.data; /* el results es generico y contiene el array*/
+        let prisection = document.querySelector('.canciones');
+        let contenido = []; /* comienza vacia porque es la lista a la que se le van a ir agregando cosas*/
 
-    for (let i = 0; i < 6; i++){ // i++ se va iterando
+    for (let i = 0; i < info.length; i++){ // i++ se va iterando
         contenido+= `<article class="cajas-track">
-        <img src=${info[i].picture} alt='' />
+        <img src=${info[i].artist.picture} alt='' />
         <p>title: ${info[i].title} </p>
-        <p>Name: ${info[i].name} </p>
         </article>`
     
     }
