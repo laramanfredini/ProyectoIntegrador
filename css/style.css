@@ -12,7 +12,7 @@ ul, ol {padding: 0;}
 li {list-style-type: none;}
 
  
-a {text-decoration: none; color: white
+a {text-decoration: none; color: black
 }
 
   .logo{
@@ -29,28 +29,31 @@ header {
     text-decoration: none;
     font-family: 'Roboto', 'swap';
     display: flex;
-    color: white;
+    color: black;
     margin: 15px;
     justify-content: space-around;
     align-items: center;
-    color: white;
     border-style: solid;
     border-width: 1px;
     border-color: white;
     border-radius: 15px;
 }
 header {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     text-decoration: none;
   
 }
 .logo {
-  height: 150px;
-  width: 200px;
- margin: 10px;
+  height: 100px;
+  width: 100px;
 
 }
+
+.menu {
+  color: black
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -63,7 +66,7 @@ nav li {
 }
 
 nav a {
-  color: #fff;
+  color: black;
   text-decoration: none;
 }
 
@@ -73,35 +76,60 @@ nav ul li a:hover{
 
 .canciones{
   background-color: black;
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+    overflow: scroll;
+    color: white;
+    border-style: solid;
+    border-radius: 15px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.canciones img {
+  height: 200x;
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
   overflow: scroll;
-  color: white;
-  border-style: solid;
-  border-radius: 15px;
-  margin-bottom: 100px;
 }
 .albumes{
   background-color: black;
   display: flex;
   flex-wrap: nowrap;
-  padding: 20px;
+  padding: 10px;
   overflow: scroll;
   color: white;
   border-style: solid;
   border-radius: 15px;
   margin-bottom: 100px;
+  text-align: center;
+}
+.albumes img {
+  height: 200x;
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: scroll;
 }
 .artistas{
   background-color: black;
   display: flex;
   flex-wrap: nowrap;
-  padding: 20px;
+  padding: 10px;
   overflow: scroll;
   color: white;
   border-style: solid;
   border-radius: 15px;
   margin-bottom: 100px;
+  text-align: center;
 }
   
+
+.artistas img {
+  height: 200x;
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: scroll;
+}
