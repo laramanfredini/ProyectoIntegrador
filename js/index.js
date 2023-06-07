@@ -99,7 +99,7 @@ fetch(terurl)
     contenido+= `<article class="cajas-artist">
     <a href="./detail-artist.html?id=${info[i].id}">
     <img src=${info[i].picture} alt='' />
-    <h3>Title: ${info[i].name} </h3>
+    <h3>Name: ${info[i].name} </h3>
     </a>
     </article>`
 
