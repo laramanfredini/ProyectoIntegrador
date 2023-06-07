@@ -24,31 +24,31 @@ else {
 
 
 //GENEROS
-let urlGenres ='https://api.allorigins.win/raw?url=https://api.deezer.com/genre';
+let genres = document.querySelector ('.generos');
 
-fetch (urlGenres)
-  .then(function(res) {
-  return res.json();
+fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre')
+  .then(function(datos) {
+  return datos.json();
   })
 
-  .then(function(data){
-    console.log (data);
-     let info  = data.data
-     let section = document.querySelector ('.section');
-     let contenido = []
-     for (let i = 0; i<info.length; i++){
+  .then(function(info){
+    console.log (info)
 
-      contenido += `<ul>
-      <a href="./detail-genres.html?id=${info.data[i].id}">
-      <h3>Title: ${info[i].name} </h3></a>
-      </ul>`
+     let listaGenres  = []
+     for (let i = 0; i<info.data.length; i++){
+
+      listaGenres += `
+          <article class="generos">
+          <img src="${info.data[i].picture}">
+          <a href="./detail-genres.html">${info.data[i].name}</a>
+          </article> ` 
 
           console.log(info.data[i].picture);
   
       };
-      section.innerHTML +=contenido;
+      genres.innerHTML += listaGenres;
+      console.log(genres);
      })
-     .catch(function(error){
-        console.log('El error es' + error);
-    })
+
+
 
