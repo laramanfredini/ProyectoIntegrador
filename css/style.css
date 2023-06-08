@@ -199,3 +199,47 @@ footer p {
   margin-left: 20px;
   overflow: scroll;
 }
+
+
+/* Estilo para el título */
+.tituloTrack {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para la sección de detalles del track */
+.track-details {
+  margin-top: 20px;
+}
+
+/* Estilo para el contenedor del track */
+.trackbox {
+  background-color: #f2f2f2;
+  padding: 10px;
+  color: black;
+}
+.trackbox a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+/* Estilo para el botón de agregar a la playlist */
+.boton {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.boton:hover {
+  background-color: #45a049;
+}

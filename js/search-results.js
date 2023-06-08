@@ -25,7 +25,7 @@ else {
 //lista de favoritos
 
 // 1 - recuperar el storage 
-let recuperoStorage= localStorage.getItem("favoritos");
+let recuperoStorage= localStorage.getItem("resultados");
 console.log(recuperoStorage);
 
 //2 - tengo que transformar de JSON a array
@@ -33,7 +33,7 @@ let seleccionados = JSON.parse(recuperoStorage);
 console.log(seleccionados);
 
 // 3 - captura el contenedor de los elementos a mostrar
-let lista= document.querySelector (".favoritos");
+let lista= document.querySelector (".results");
 
 // 4 - evaluar si el localStorage está vacío quiero indicarle al usuario que no hay favoritos seleccionados
 if (seleccionados == null || seleccionados.length == 0){
