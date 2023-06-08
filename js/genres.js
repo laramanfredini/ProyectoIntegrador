@@ -24,7 +24,7 @@ else {
 
 
 //GENEROS
-let genres = document.querySelector ('.generos');
+let genres = document.querySelector ('.sectGenres');
 
 fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
   .then(function(datos) {
@@ -39,8 +39,9 @@ fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
 
       listaGenres += `
           <article class="generos">
+          <a href="./detail-genres.html">
           <img src="${info.data[i].picture}">
-          <a href="./detail-genres.html">${info.data[i].name}</a>
+          ${info.data[i].name}</a>
           </article> ` 
 
           console.log(info.data[i].picture);
