@@ -24,7 +24,8 @@ else {
 //cada seccion tiene un url y un fetch propio
 
 //priurl canciones
-let priurl = ("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks")
+let priurl = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks");
+
 
 fetch(priurl)
 
@@ -55,7 +56,7 @@ return respuesta.json();
     })
 
 //segurl albums
-let segurl = ("https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums")
+let segurl = ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums")
 fetch(segurl)
 .then(function(respuesta){
     return respuesta.json();
@@ -83,7 +84,7 @@ fetch(segurl)
 })
 
 //terurl artist
-let terurl = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+let terurl = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists"
 fetch(terurl)
 .then(function(respuesta){
     return respuesta.json();
@@ -110,6 +111,4 @@ fetch(terurl)
 .catch(function(error){
     console.log('El error es' + error);
 })
-
-
 

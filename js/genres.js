@@ -26,7 +26,7 @@ else {
 //GENEROS
 let genres = document.querySelector ('.generos');
 
-fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre')
+fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
   .then(function(datos) {
   return datos.json();
   })
@@ -49,6 +49,4 @@ fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre')
       genres.innerHTML += listaGenres;
       console.log(genres);
      })
-
-
 
