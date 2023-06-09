@@ -39,7 +39,7 @@ fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/album/302127' 
     console.log (tracks)
   
     
-    album1.innerHTML = `
+    Album1.innerHTML = `
 
     <article class="trackbox">
     <img src="${picture_medium}" alt="fotoboh" class="fotobohemian track">
