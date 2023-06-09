@@ -39,7 +39,7 @@ let lista = document.querySelector(".results");
 if (seleccionados == null || seleccionados.length == 0) {
     lista.innerHTML = `<p> No hay favoritos seleccionados </p>`
 } else {
-    // pedir a la api los dotos de todos los ids del array de personajes elegidos
+    // pedir a la api los datos de todos los ids del array de personajes elegidos
     for (let i = 0; i < seleccionados.length; i++) {
         buscarYMostrarFavoritos(seleccionados[i])
     }

@@ -28,29 +28,29 @@ let idArtista = qsToObject.get('id');
 
 let artistas1 = document.querySelector('.artist-details')
 
-fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idArtista)
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idArtista) 
     .then(function (res) {
         return res.json();
     })
 
-
-
     .then(function (data) {
-        console.log(data);
+        console.log(data);})git
+
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idArtista + '/albums') 
+        .then(function (res) {
+            return res.json();
+        })
+
+        .then(function (data) {
+            console.log(data);
 
 
         artistas1.innerHTML += `
   
       <article class="artistbox">
       <img src="${data.picture}">
-      <p>${data.title} </p>
-      <a href="./detail-artist.html"> ${data.artist.name}</a>
-      <a href="./detail-album.html"</a>
-      <br>
-      <a href="./detail-album.html">${data.album.title}</a>
+      <p>${data.name} </p>
       </article>`
-
-
     })
 
     .catch(function (error) {
