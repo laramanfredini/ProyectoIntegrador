@@ -44,12 +44,12 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
         canciones1.innerHTML = `
 
     <article class="trackbox">
-    <img src="${data.album.cover}"">
+    <a href="./detail-album.html"><img src="${data.album.cover}""></a>
     
     <p>${data.title} </p>
-    <p> ${data.artist.name}</p>
+    <a href="./detail-artist.html"><p> ${data.artist.name}</p></a>
     
-    <p>${data.album.title}</p>
+   <a href="./detail-album.html"> <p>${data.album.title}</p></a>
     </article>`
     })
 
