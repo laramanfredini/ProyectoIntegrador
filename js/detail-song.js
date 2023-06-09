@@ -47,10 +47,9 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
     <img src="${data.album.cover}"">
     
     <p>${data.title} </p>
-    <a href="./detail-artist.html"> ${data.artist.name}</a>
-    <a href="./detail-album.html"</a>
-    <br>
-    <a href="./detail-album.html">${data.album.title}</a>
+    <p> ${data.artist.name}</p>
+    
+    <p>${data.album.title}</p>
     </article>`
     })
 

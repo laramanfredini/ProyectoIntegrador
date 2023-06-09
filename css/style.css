@@ -326,3 +326,29 @@ body {
   margin-top: 20px;
 }
 
+
+.lista-album {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.lista-album a {
+  color: #333;
+  align-items: center;
+}
+
+.lista-album img {
+  height: 200x;
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+

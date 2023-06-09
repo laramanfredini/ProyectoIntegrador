@@ -49,3 +49,35 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/' + idAl
     .catch(function (error) {
         console.log(error);
     })
+
+
+    //Fetch para traer la lista de canciones
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/' + idAlbum+ "/tracks") 
+.then(function (res) {
+    return res.json();
+})
+
+.then(function (data) {
+    console.log(data);
+    let listaAlbum = document.querySelector('.lista-album')
+    let info = data.data
+    let contenido = []
+
+    for (let i = 0; i < 5; i++) { //i++ se va iterando
+        contenido += `<article class="article-album">
+<a href="./detail-album.html?id=${info[i].id}">
+<img src=${info[i].cover_medium}/>
+<h3>Title: ${info[i].title} </h3>
+</a>
+</article>`}
+listaAlbum.innerHTML += contenido
+})
+
+.catch(function (error) {
+    console.log(error);
+})
+
+
+document.getElementById("darkModeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });
