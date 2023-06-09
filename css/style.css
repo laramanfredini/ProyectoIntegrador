@@ -269,3 +269,20 @@ footer p {
   margin-left: 20px;
 
 }
+
+#darkmode
+
+:root {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}

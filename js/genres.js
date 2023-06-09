@@ -51,3 +51,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
         console.log(genres);
     })
 
+     document.getElementById("darkModeToggle").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+      });
+    
