@@ -50,3 +50,8 @@ fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre' + idGen
     <a href="./detail-album.html">${tracks.album.title}</a>
     </article>`
 })
+
+
+document.getElementById("darkModeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });

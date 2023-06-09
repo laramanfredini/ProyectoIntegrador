@@ -22,32 +22,30 @@ else {
 }
 })
 
+
 let queryString = location.search;
-let qsToObject = new URLSearchParams (queryString);
-let idGenre = qsToObject.get ('id'); 
+let qsToObject = new URLSearchParams(queryString);
+let idAlbum = qsToObject.get('id');
 
+let album1 = document.querySelector('.album-details')
 
-let genre1 = document.querySelector ('.track-details')
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/' + idAlbum) 
+    .then(function (res) {
+        return res.json();
+    })
 
-fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/album/302127' + idAlbum)
-  
-  .then (function(detalle) {
-  return detalle.json();
-  })
+    .then(function (data) {
+        console.log(data);
+        album1.innerHTML += `
+        <article class="albumbox">
+        <img src="${data.cover}">
+        <p>${data.title} </p>
+        <p>${data.artist.name} </p>
+        <p>${data.genres.data[0].name} </p>
+        <p>${data.release_date} </p>
+        </article>`
+    })
 
-  .then (function(tracks){
-    console.log (tracks)
-  
-    
-    Album1.innerHTML = `
-
-    <article class="trackbox">
-    <img src="${picture_medium}" alt="fotoboh" class="fotobohemian track">
-    
-    <p>${genre.name} </p>
-    <a href="./detail-artist.html"> ${genre.name}</a>
-    <a href="./detail-album.html"</a>
-    <br>
-    <a href="./detail-album.html">${tracks.album.title}</a>
-    </article>`
-})
+    .catch(function (error) {
+        console.log(error);
+    })

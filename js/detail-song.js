@@ -44,7 +44,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
         canciones1.innerHTML = `
 
     <article class="trackbox">
-    <img src="${data.album.cover}" alt="fotoboh" class="fotobohemian track">
+    <img src="${data.album.cover}"">
     
     <p>${data.title} </p>
     <a href="./detail-artist.html"> ${data.artist.name}</a>
@@ -53,3 +53,8 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
     <a href="./detail-album.html">${data.album.title}</a>
     </article>`
     })
+
+
+    document.getElementById("darkModeToggle").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+      });

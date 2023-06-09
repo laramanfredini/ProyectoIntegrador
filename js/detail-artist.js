@@ -71,3 +71,8 @@ listaAlbum.innerHTML += contenido
 .catch(function (error) {
     console.log(error);
 })
+
+
+document.getElementById("darkModeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });

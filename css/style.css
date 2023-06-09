@@ -273,7 +273,7 @@ footer p {
 #darkmode
 
 :root {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
 }
 
@@ -284,5 +284,45 @@ body {
 
 .dark-mode {
   background-color: #333;
-  color: #ffffff;
+  color: #fff;
 }
+
+#darkModeToggle {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+
+}
+
+#darkModeToggle:hover {
+  background-color: #333;
+}
+
+
+.tituloDetail {
+  color: #333;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.track-details {
+  margin-top: 20px;
+}
+
+.trackbox {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+
+.trackbox img {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+}
+
