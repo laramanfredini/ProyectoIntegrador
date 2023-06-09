@@ -34,25 +34,40 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idA
     })
 
     .then(function (data) {
-        console.log(data);})git
-
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idArtista + '/albums') 
-        .then(function (res) {
-            return res.json();
-        })
-
-        .then(function (data) {
-            console.log(data);
-
-
+        console.log(data);
         artistas1.innerHTML += `
-  
-      <article class="artistbox">
-      <img src="${data.picture}">
-      <p>${data.name} </p>
-      </article>`
+        <article class="artistbox">
+        <img src="${data.picture}">
+        <p>${data.name} </p>
+        </article>`
     })
 
     .catch(function (error) {
         console.log(error);
     })
+
+//Fetch para traer las albums
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + idArtista+ "/albums") 
+.then(function (res) {
+    return res.json();
+})
+
+.then(function (data) {
+    console.log(data);
+    let listaAlbum = document.querySelector('.artist-album')
+    let info = data.data
+    let contenido = []
+
+    for (let i = 0; i < 5; i++) { //i++ se va iterando
+        contenido += `<article class="artistAlbum">
+<a href="./detail-album.html?id=${info[i].id}">
+<img src=${info[i].cover_medium}/>
+<h3>Title: ${info[i].title} </h3>
+</a>
+</article>`}
+listaAlbum.innerHTML += contenido
+})
+
+.catch(function (error) {
+    console.log(error);
+})
