@@ -243,3 +243,20 @@ footer p {
 .boton:hover {
   background-color: #45a049;
 }
+
+#darkmode
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}

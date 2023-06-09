@@ -112,3 +112,8 @@ fetch(terurl)
     console.log('El error es' + error);
 })
 
+document.getElementById("darkModeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });
+
+
