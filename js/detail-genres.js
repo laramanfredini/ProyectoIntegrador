@@ -26,28 +26,23 @@ let qsToObject = new URLSearchParams (queryString);
 let idGenre = qsToObject.get ('id'); 
 
 
-let genre1 = document.querySelector ('.track-details')
+let genre1 = document.querySelector ('.genre-details')
 
 fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre' + idGenre)
   
-  .then (function(detalle) {
-  return detalle.json();
+  .then (function(res) {
+  return res.json();
   })
 
-  .then (function(tracks){
-    console.log (tracks)
+  .then (function(data){
+    console.log (data)
   
     
     genre1.innerHTML = `
 
-    <article class="trackbox">
-    <img src="${picture_medium}" alt="fotoboh" class="fotobohemian track">
-    
-    <p>${genre.name} </p>
-    <a href="./detail-artist.html"> ${genre.name}</a>
-    <a href="./detail-album.html"</a>
-    <br>
-    <a href="./detail-album.html">${tracks.album.title}</a>
+    <article class="dGenre-box">    
+    <p>${data.name} </p>
+    <img src="${data.picture}">
     </article>`
 })
 

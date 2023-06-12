@@ -66,7 +66,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/' + idAl
     for (let i = 0; i < 5; i++) { //i++ se va iterando
         contenido += `<article class="article-album">
 <a href="./detail-album.html"?id=${info[i].id}">
-<img src=${info[i].cover_medium}/></a>
+
 <a class="detail-song.html"><h3>Title: ${info[i].title} </h3></a>
 </article>`}
 listaAlbum.innerHTML += contenido
