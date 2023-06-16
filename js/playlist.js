@@ -22,6 +22,10 @@ formulario.addEventListener('submit', function (evento) {
     }
 })
 
+let playlist = ('https://api.allorigins.win/raw?url=https://api.deezer.com/playlist/9677')
+
+
+
 document.getElementById("darkModeToggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
   });

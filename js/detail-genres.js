@@ -28,7 +28,7 @@ let idGenre = qsToObject.get ('id');
 
 let genre1 = document.querySelector ('.genre-details')
 
-fetch ('https://api.allorigins.win/raw?url=https://api.deezer.com/genre' + idGenre)
+fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + idGenre)
   
   .then (function(res) {
   return res.json();
