@@ -37,13 +37,10 @@ fetch ('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + idG
   .then (function(data){
     console.log (data)
   
-    
-    genre1.innerHTML = `
-
-    <article class="dGenre-box">    
-    <p>${data.name} </p>
-    <img src="${data.picture}">
-    </article>`
+let name = document.querySelector('.name');
+let image = document.querySelector('.image');
+name.innerText = data.name
+image.src = data.picture_big;
 })
 
 

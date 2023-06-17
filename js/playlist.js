@@ -21,8 +21,7 @@ formulario.addEventListener('submit', function (evento) {
         this.submit()
     }
 })
-
-let playlist = ('https://api.allorigins.win/raw?url=https://api.deezer.com/playlist/9677')
+ 
 
 
 

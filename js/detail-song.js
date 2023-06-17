@@ -29,7 +29,7 @@ let qsToObject = new URLSearchParams(queryString);
 let idCancion = qsToObject.get('id');
 
 
-let canciones1 = document.querySelector('.track-details')
+let canciones = document.querySelector('.track-details')
 
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCancion)
 
@@ -41,7 +41,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
         console.log(data)
 
 
-        canciones1.innerHTML = `
+        canciones.innerHTML = `
 
     <article class="trackbox">
     <a href="./detail-album.html"><img src="${data.album.cover}""></a>
@@ -52,6 +52,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/' + idCa
    <a href="./detail-album.html"> <p>${data.album.title}</p></a>
     </article>`
     })
+
 
 
     document.getElementById("darkModeToggle").addEventListener("click", function() {
